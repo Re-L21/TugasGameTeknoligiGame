@@ -14,10 +14,6 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of df604bb (Raycast Updated)
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 

@@ -1,8 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD
---- !u!1 &4218657126315543220
-=======
 --- !u!1 &6516835660887644845
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,7 +79,6 @@ MonoBehaviour:
   rayObstacle: {fileID: 6516835661767282366}
   target: {fileID: 6516835662392316282}
 --- !u!1 &6516835661898194574
->>>>>>> parent of df604bb (Raycast Updated)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
