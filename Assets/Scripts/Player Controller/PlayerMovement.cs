@@ -49,7 +49,6 @@ public class PlayerMovement : MonoBehaviour
         if (anim.GetBool("Attack"))
             Shoot();
 
-
     }
 
     private void FixedUpdate()
@@ -61,9 +60,6 @@ public class PlayerMovement : MonoBehaviour
     void Shoot()
     {
         GameObject arrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
-        //Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
-
-        //rb.AddForce(firePoint.up * arrowSpeed, ForceMode2D.Impulse);
     }
 
 }

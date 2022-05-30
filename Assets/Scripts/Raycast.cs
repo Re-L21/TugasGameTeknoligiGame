@@ -18,13 +18,10 @@ public class Raycast : MonoBehaviour
         if (rayHit.collider != null)
         {
             Debug.DrawRay(hit.transform.position, -Vector2.up, Color.red);
-            Debug.Log("Ray Hit : " + rayHit.transform.name);
-            Debug.Log("behind");
             sp.sortingOrder = 0;
         }
         else
         {
-            Debug.Log("in front");
             sp.sortingOrder = 2;
         }
     }
