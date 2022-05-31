@@ -38,16 +38,14 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetAxisRaw("Vertical") < 0)
             interactor.localRotation = Quaternion.Euler(0, 0, -90);
 
-        if(anim.GetFloat("Speed") < 0.01)
+        if(anim.GetFloat("Speed") == 0)
         {
             if (Input.GetButtonDown("Fire1") && !anim.GetBool("Attack"))
+            {
                 anim.SetBool("Attack", true);
-            else
-                anim.SetBool("Attack", false);
+                StartCoroutine(ShootEnemy());
+            }
         }
-
-        if (anim.GetBool("Attack"))
-            Shoot();
 
     }
 
@@ -57,9 +55,13 @@ public class PlayerMovement : MonoBehaviour
 
     }
     
-    void Shoot()
+    IEnumerator ShootEnemy()
     {
-        GameObject arrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
+        anim.SetBool("Attack", false);
+
     }
+
 
 }
